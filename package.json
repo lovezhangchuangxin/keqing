@@ -1,0 +1,147 @@
+{
+	"name": "lovekeqing",
+	"displayName": "lovekeqing",
+	"description": "code with keqing",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.62.0"
+	},
+	"keywords": [
+		"keqing",
+		"code"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*",
+		"onCommand:lovekeqing.chooseVoice",
+		"onCommand:lovekeqing.sayHello",
+		"onCommand:lovekeqing.hobby",
+		"onCommand:lovekeqing.duty",
+		"onCommand:lovekeqing.try",
+		"onCommand:lovekeqing.propose",
+		"onCommand:lovekeqing.firstMet",
+		"onCommand:lovekeqing.thundered",
+		"onCommand:lovekeqing.trouble",
+		"onCommand:lovekeqing.reflection",
+		"onCommand:lovekeqing.reflectEyeOfGod",
+		"onCommand:lovekeqing.encourage",
+		"onCommand:lovekeqing.souvenir",
+		"onCommand:lovekeqing.idea",
+		"onCommand:lovekeqing.birthday",
+		"onCommand:lovekeqing.hateFood",
+		"onCommand:lovekeqing.breakthrough01",
+		"onCommand:lovekeqing.breakthrough02",
+		"onCommand:lovekeqing.breakthrough03",
+		"onCommand:lovekeqing.breakthrough04",
+		"onCommand:lovekeqing.goodNight",
+		"onCommand:lovekeqing.goodEvening",
+		"onCommand:lovekeqing.favoriteFood",
+		"onCommand:lovekeqing.snow",
+		"onCommand:lovekeqing.rain",
+		"onCommand:lovekeqing.gossipDelay",
+		"onCommand:lovekeqing.gossipRelax",
+		"onCommand:lovekeqing.gossipChance",
+		"onCommand:lovekeqing.share",
+		"onCommand:lovekeqing.readMe01",
+		"onCommand:lovekeqing.readMe02",
+		"onCommand:lovekeqing.readMe03",
+		"onCommand:lovekeqing.readMe04",
+		"onCommand:lovekeqing.readMe05",
+		"onCommand:lovekeqing.goodSunlight",
+		"onCommand:lovekeqing.goodMorning",
+		"onCommand:lovekeqing.questionEyeOfGod",
+		"onCommand:lovekeqing.goodAfternoon",
+		"onCommand:lovekeqing.pursue"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "lovekeqing.sayHello",
+				"title": "刻晴"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "lovekeqing.chooseVoice",
+				"key": "ctrl+k",
+				"mac": "cmd+k",
+				"when": "editorTextFocus"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorFocus",
+					"command": "lovekeqing.sayHello",
+					"group": "navigation"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "Plugin config.插件配置",
+			"properties": {
+				"lovekeqing.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "想要阿晴陪你吗？"
+				},
+				"lovekeqing.first": {
+					"type": "boolean",
+					"default": true,
+					"description": "是否首次使用该插件？"
+				},
+				"lovekeqing.city": {
+					"type": "string",
+					"default": "武汉",
+					"description": "选择你所在的城市："
+				},
+				"lovekeqing.volume": {
+					"type": "number",
+					"default": 10,
+					"description": "调节音量大小"
+				},
+				"lovekeqing.interval": {
+					"type": "number",
+					"default": 60,
+					"description": "提醒劳逸结合是不错的时间间隔(分钟为单位,不能太小！！！)"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p -w . --outDir out",
+		"pretest": "npm run compile-tests && npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"@types/sound-play": "^1.1.0",
+		"@types/vscode": "^1.62.0",
+		"@typescript-eslint/eslint-plugin": "^4.31.1",
+		"@typescript-eslint/parser": "^4.31.1",
+		"@vscode/test-electron": "^1.6.2",
+		"eslint": "^7.32.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.1",
+		"ts-loader": "^9.2.5",
+		"typescript": "^4.4.3",
+		"webpack": "^5.52.1",
+		"webpack-cli": "^4.8.0"
+	},
+	"dependencies": {
+		"axios": "^0.24.0",
+		"sound-play": "^1.1.0"
+	}
+}
