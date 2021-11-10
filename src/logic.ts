@@ -41,7 +41,7 @@ class Keqing {
             } else if (info.weather?.includes('雪')) {
                 vscode.commands.executeCommand('lovekeqing.rain');
             }
-        }, 7500);
+        }, 9000);
     }
 
     relax(): NodeJS.Timeout {
