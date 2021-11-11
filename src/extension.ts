@@ -40,14 +40,15 @@ export function activate(context: vscode.ExtensionContext) {
 			'reflectEyeOfGod', 'encourage', 'souvenir', 'idea', 'birthday', 'hateFood', 'breakthrough01', 'breakthrough02',
 			'breakthrough03', 'breakthrough04', 'goodNight', 'goodEvening', 'favoriteFood', 'snow', 'rain', 'gossipDelay',
 			'gossipRelax', 'gossipChance', 'share', 'readMe01', 'readMe02', 'readMe03', 'readMe04', 'readMe05', 'goodSunlight',
-			'goodMorning', 'lovekeqing.questionEyeOfGod', 'lovekeqing.question', 'goodAfternoon', 'pursue'];
+			'goodMorning', 'questionEyeOfGod', 'question', 'goodAfternoon', 'pursue'];
 
 		vscode.window.showQuickPick(voiceArr, {}).then(data => {
-			let myCommand = 'lovekeqing.pursue';
-			if (data) {
+			let myCommand = '';
+			if (data != undefined) {
 				myCommand = 'lovekeqing.' + voiceCommand[voiceArr.indexOf(data)];
+				vscode.commands.executeCommand(myCommand);
 			}
-			vscode.commands.executeCommand(myCommand);
+
 		});
 	}));
 
