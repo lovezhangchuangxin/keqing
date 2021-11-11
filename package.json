@@ -151,5 +151,9 @@
 	"dependencies": {
 		"axios": "^0.24.0",
 		"sound-play": "^1.1.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lovezhangchuangxin/keqing"
 	}
 }
