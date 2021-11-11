@@ -90,7 +90,7 @@
 				"lovekeqing.enabled": {
 					"type": "boolean",
 					"default": true,
-					"description": "想要阿晴陪你吗？"
+					"description": "想要阿晴陪你吗？（不准不想）"
 				},
 				"lovekeqing.first": {
 					"type": "boolean",
