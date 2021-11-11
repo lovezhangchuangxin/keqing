@@ -27,13 +27,13 @@ export function activate(context: vscode.ExtensionContext) {
 		const voiceArr = ['爱好', '本职', '尝试', '倡议', '初次见面', '打雷的时候', '烦恼', '反思', '反思神之眼', '鼓励',
 			'纪念品', '理念', '生日', '讨厌的食物', '突破-合', '突破-起', '突破-转', '晚安', '晚上好', '喜欢的食物', '下雪的时候',
 			'下雨的时候', '闲聊-耽误', '闲聊-放松', '闲聊-机会', '想分享的见闻', '想要了解刻晴-其一', '想要了解刻晴-其二',
-			'想要了解刻晴-其三', '想要了解刻晴-其四', '想要了解刻晴-其五', '阳光很好', '早上好', '质疑神之眼', '中午好', '追寻'];
+			'想要了解刻晴-其三', '想要了解刻晴-其四', '想要了解刻晴-其五', '阳光很好', '早上好', '质疑神之眼', '质疑', '中午好', '追寻'];
 
 		const voiceCommand = ['hobby', 'duty', 'try', 'propose', 'firstMet', 'thundered', 'trouble', 'reflection',
 			'reflectEyeOfGod', 'encourage', 'souvenir', 'idea', 'birthday', 'hateFood', 'breakthrough01', 'breakthrough02',
 			'breakthrough03', 'breakthrough04', 'goodNight', 'goodEvening', 'favoriteFood', 'snow', 'rain', 'gossipDelay',
 			'gossipRelax', 'gossipChance', 'share', 'readMe01', 'readMe02', 'readMe03', 'readMe04', 'readMe05', 'goodSunlight',
-			'goodMorning', 'goodAfternoon', 'pursue'];
+			'goodMorning', 'lovekeqing.questionEyeOfGod', 'lovekeqing.question', 'goodAfternoon', 'pursue'];
 
 		vscode.window.showQuickPick(voiceArr, {}).then(data => {
 			let myCommand = 'lovekeqing.pursue';

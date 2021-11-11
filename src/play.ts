@@ -19,115 +19,118 @@ class Play {
 
     public static addCommand(context: vscode.ExtensionContext) {
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.hobby', () => {
-            new Play('爱好').run();
+            new Play('hobby').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.duty', () => {
-            new Play('本职').run();
+            new Play('duty').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.try', () => {
-            new Play('尝试').run();
+            new Play('try').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.propose', () => {
-            new Play('倡议').run();
+            new Play('propose').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.firstMet', () => {
-            new Play('初次见面').run();
+            new Play('firstMet').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.thundered', () => {
-            new Play('打雷的时候').run();
+            new Play('thundered').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.trouble', () => {
-            new Play('烦恼').run();
+            new Play('trouble').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.reflection', () => {
-            new Play('反思').run();
+            new Play('reflection').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.reflectEyeOfGod', () => {
-            new Play('反思神之眼').run();
+            new Play('reflectEyeOfGod').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.encourage', () => {
-            new Play('鼓励').run();
+            new Play('encourage').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.souvenir', () => {
-            new Play('纪念品').run();
+            new Play('souvenir').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.idea', () => {
-            new Play('理念').run();
+            new Play('idea').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.birthday', () => {
-            new Play('生日').run();
+            new Play('birthday').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.hateFood', () => {
-            new Play('讨厌的食物').run();
+            new Play('hateFood').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.breakthrough01', () => {
-            new Play('突破-承').run();
+            new Play('breakthrough01').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.breakthrough02', () => {
-            new Play('突破-合').run();
+            new Play('breakthrough02').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.breakthrough03', () => {
-            new Play('突破-起').run();
+            new Play('breakthrough03').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.breakthrough04', () => {
-            new Play('突破-转').run();
+            new Play('breakthrough04').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.goodNight', () => {
-            new Play('晚安').run();
+            new Play('goodNight').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.goodEvening', () => {
-            new Play('晚上好').run();
+            new Play('goodEvening').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.favoriteFood', () => {
-            new Play('喜欢的食物').run();
+            new Play('favoriteFood').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.snow', () => {
-            new Play('下雪的时候').run();
+            new Play('snow').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.rain', () => {
-            new Play('下雨的时候').run();
+            new Play('rain').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.gossipDelay', () => {
-            new Play('闲聊-耽误').run();
+            new Play('gossipDelay').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.gossipRelax', () => {
-            new Play('闲聊-放松').run();
+            new Play('gossipRelax').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.gossipChance', () => {
-            new Play('闲聊-机会').run();
+            new Play('gossipChance').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.share', () => {
-            new Play('想分享的见闻').run();
+            new Play('share').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.readMe01', () => {
-            new Play('想要了解刻晴-其一').run();
+            new Play('readMe01').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.readMe02', () => {
-            new Play('想要了解刻晴-其二').run();
+            new Play('readMe02').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.readMe03', () => {
-            new Play('想要了解刻晴-其三').run();
+            new Play('readMe03').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.readMe04', () => {
-            new Play('想要了解刻晴-其四').run();
+            new Play('readMe04').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.readMe05', () => {
-            new Play('想要了解刻晴-其五').run();
+            new Play('readMe05').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.goodSunlight', () => {
-            new Play('阳光很好').run();
+            new Play('goodSunlight').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.goodMorning', () => {
-            new Play('早上好').run();
+            new Play('goodMorning').run();
+        }));
+        context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.question', () => {
+            new Play('question').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.questionEyeOfGod', () => {
-            new Play('质疑神之眼').run();
+            new Play('questionEyeOfGod').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.goodAfternoon', () => {
-            new Play('中午好').run();
+            new Play('goodAfternoon').run();
         }));
         context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.pursue', () => {
-            new Play('追寻').run();
+            new Play('pursue').run();
         }));
     }
 };

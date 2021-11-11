@@ -7,7 +7,7 @@
 		"vscode": "^1.62.0"
 	},
 	"publisher": "zhangchuangxin",
-	"icon": "./assets/image/keqing.png",
+	"icon": "assets/image/keqing.png",
 	"keywords": [
 		"keqing",
 		"code"
@@ -55,7 +55,8 @@
 		"onCommand:lovekeqing.goodMorning",
 		"onCommand:lovekeqing.questionEyeOfGod",
 		"onCommand:lovekeqing.goodAfternoon",
-		"onCommand:lovekeqing.pursue"
+		"onCommand:lovekeqing.pursue",
+		"onCommand:lovekeqing.question"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
