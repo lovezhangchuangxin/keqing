@@ -102,15 +102,20 @@
 					"default": "武汉",
 					"description": "选择你所在的城市："
 				},
+				"lovekeqing.isNeedRelaxWarn": {
+					"type": "boolean",
+					"default": false,
+					"description": "是否需要提醒：劳逸结合是不错，但也不放松过头"
+				},
+				"lovekeqing.relaxWarnInterval": {
+					"type": "number",
+					"default": 60,
+					"description": "提醒劳逸结合是不错的时间间隔(分钟为单位,不能太小！！！)"
+				},
 				"lovekeqing.volume": {
 					"type": "number",
 					"default": 10,
 					"description": "调节音量大小"
-				},
-				"lovekeqing.interval": {
-					"type": "number",
-					"default": 60,
-					"description": "提醒劳逸结合是不错的时间间隔(分钟为单位,不能太小！！！)"
 				}
 			}
 		}

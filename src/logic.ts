@@ -44,11 +44,16 @@ class Keqing {
         }, 9000);
     }
 
-    relax(): NodeJS.Timeout {
-        this.timeId = setInterval(() => {
-            vscode.commands.executeCommand('lovekeqing.gossipRelax');
-        }, 3600 * 1000 * (this.config.get('interval') as number));
-        return this.timeId;
+    relax(): NodeJS.Timeout | null {
+        if (this.config.get('isNeedRelaxWarn')) {
+            this.timeId = setInterval(() => {
+                vscode.commands.executeCommand('lovekeqing.gossipRelax');
+            }, 60 * 1000 * (this.config.get('relaxWarnInterval') as number));
+            return this.timeId;
+        }
+        else {
+            return null;
+        }
     }
 
 };
