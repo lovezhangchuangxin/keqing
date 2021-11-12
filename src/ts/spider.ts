@@ -1,4 +1,5 @@
 import axios, { AxiosRequestHeaders } from "axios";
+import * as vscode from 'vscode';
 
 // 风向
 enum WindDrection {
@@ -49,7 +50,7 @@ interface Info {
 /**
  * 爬虫类，爬取公开天气信息
  */
-class Spider {
+export class Spider {
     url: string = '';
     headers: AxiosRequestHeaders = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44"
@@ -87,13 +88,11 @@ class Spider {
                     bodytempInfo: weatherData.bodytemp_info,
                 }
             }).catch(err => {
-                console.log(err);
+                vscode.window.showErrorMessage('爬取天气失败，请确认城市填写正确');
             })
         } catch (error) {
-            console.log(error);
+            vscode.window.showErrorMessage('爬取天气失败，请确认城市填写正确');
         }
     }
 };
-
-export default Spider;
 

@@ -2,7 +2,7 @@ import * as sound from 'sound-play';
 import * as path from 'path';
 import * as vscode from 'vscode';
 
-class Play {
+export class Play {
     public song: string;
 
     public volume: number;
@@ -135,5 +135,4 @@ class Play {
     }
 };
 
-export default Play;
 

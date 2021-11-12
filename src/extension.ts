@@ -1,6 +1,8 @@
 import * as vscode from 'vscode';
-import Keqing from './logic';
-import Play from './play';
+import { Keqing } from './ts/logic';
+import { Play } from './ts/play';
+import { Showimg } from './ts/showImg';
+import * as path from 'path';
 
 const keqing = new Keqing();
 
@@ -8,19 +10,24 @@ export function activate(context: vscode.ExtensionContext) {
 
 	Play.addCommand(context);
 
-	if (keqing.config.get('first')) {
-		// 不能直接调用下面的 lovekeqing.sayHello 命令，因为执行顺序问题
-		vscode.window.showInformationMessage('你会喜欢我的吧', '海誓山盟', '至死不渝').then(data => {
-			vscode.commands.executeCommand('lovekeqing.firstMet');
-			console.log(data);
-		});
-		vscode.workspace.getConfiguration('lovekeqing').update('first', false);
-	}
-	else {
-		keqing.hello();
-		keqing.warnTemperature();
-		keqing.relax();
-	}
+	// 有bug,打开不同的工作区，firstMet会重复执行
+	// if (keqing.config.get('first')) {
+	// 	// 不能直接调用下面的 lovekeqing.sayHello 命令，因为执行顺序问题
+	// 	vscode.window.showInformationMessage('你会喜欢我的吧', '海誓山盟', '至死不渝').then(data => {
+	// 		vscode.commands.executeCommand('lovekeqing.firstMet');
+	// 		console.log(data);
+	// 	});
+	// 	vscode.workspace.getConfiguration('lovekeqing').update('first', false);
+	// }
+	// else {
+	// 	keqing.hello();
+	// 	keqing.warnTemperature();
+	// 	keqing.relax();
+	// }
+
+	keqing.hello();
+	keqing.warnTemperature();
+	keqing.relax();
 
 	context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.sayHello', () => {
 		vscode.window.showInformationMessage('你会喜欢我的吧', '海誓山盟', '至死不渝').then(data => {
@@ -48,8 +55,15 @@ export function activate(context: vscode.ExtensionContext) {
 				myCommand = 'lovekeqing.' + voiceCommand[voiceArr.indexOf(data)];
 				vscode.commands.executeCommand(myCommand);
 			}
-
 		});
+	}));
+
+	context.subscriptions.push(vscode.commands.registerCommand('lovekeqing.showImgs', () => {
+		let src: string = keqing.config.get('imgSrc') as string;
+		if (src == "") {
+			src = path.join(__dirname, '../assets/image');
+		}
+		Showimg.show(src);
 	}));
 
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background:{{bodyBg}};
+        }
+
+        #imgBox {
+            display: flex;
+            flex-flow: column wrap;
+            width: 98%;
+            height: {{height}}vh;
+        }
+
+        #imgItem {
+            margin: {{imgMargin}}px;
+            width: calc(100% / {{column}} - {{imgMargin}}px);
+        }
+
+        #imgItem img {
+            width: 100%;
+            background-color: {{imgBgc}};
+            border: {{border}};
+            vertical-align: baseline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imgBox">
+        {{keqingyyds}}
+    </div>
+</body>
+
+</html>

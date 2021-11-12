@@ -7,7 +7,7 @@
 		"vscode": "^1.62.0"
 	},
 	"publisher": "zhangchuangxin",
-	"icon": "assets/image/keqing.png",
+	"icon": "assets/icon/keqing.png",
 	"keywords": [
 		"keqing",
 		"code"
@@ -62,7 +62,7 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "lovekeqing.sayHello",
+				"command": "lovekeqing.showImgs",
 				"title": "刻晴"
 			}
 		],
@@ -78,7 +78,7 @@
 			"editor/context": [
 				{
 					"when": "editorFocus",
-					"command": "lovekeqing.sayHello",
+					"command": "lovekeqing.showImgs",
 					"group": "navigation"
 				}
 			]
@@ -90,7 +90,7 @@
 				"lovekeqing.enabled": {
 					"type": "boolean",
 					"default": true,
-					"description": "想要阿晴陪你吗？（不准不想）"
+					"description": "想要阿晴陪你吗？（不准不想），该配置暂无用"
 				},
 				"lovekeqing.first": {
 					"type": "boolean",
@@ -104,7 +104,7 @@
 				},
 				"lovekeqing.isNeedRelaxWarn": {
 					"type": "boolean",
-					"default": false,
+					"default": true,
 					"description": "是否需要提醒：劳逸结合是不错，但也不放松过头"
 				},
 				"lovekeqing.relaxWarnInterval": {
@@ -112,10 +112,40 @@
 					"default": 60,
 					"description": "提醒劳逸结合是不错的时间间隔(分钟为单位,不能太小！！！)"
 				},
-				"lovekeqing.volume": {
+				"lovekeqing.imgSrc": {
+					"type": "string",
+					"default": "",
+					"description": "配置图片所在目录，请写绝对路径(如 D:\\CollegeLife\\images)"
+				},
+				"lovekeqing.column": {
+					"type": "number",
+					"default": 6,
+					"description": "图片在可视区有几列"
+				},
+				"lovekeqing.height": {
+					"type": "number",
+					"default": 150,
+					"description": "图片所在盒子高度（单位为vh），100vh为可视区的高度"
+				},
+				"lovekeqing.border": {
+					"type": "string",
+					"default": "5px solid #d888f078",
+					"description": "图片边框样式"
+				},
+				"lovekeqing.imgMargin": {
 					"type": "number",
 					"default": 10,
-					"description": "调节音量大小"
+					"description": "图片外边距"
+				},
+				"lovekeqing.bodyBg": {
+					"type": "string",
+					"default": "none",
+					"description": "页面的背景"
+				},
+				"lovekeqing.imgBgc": {
+					"type": "number",
+					"default": 10,
+					"description": "图片背景（对于透明图片，背景可显现出来）"
 				}
 			}
 		}

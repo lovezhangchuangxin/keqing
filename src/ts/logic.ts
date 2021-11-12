@@ -1,7 +1,7 @@
-import Spider from "./spider";
+import { Spider } from "./spider";
 import * as vscode from 'vscode'
 
-class Keqing {
+export class Keqing {
 
     time: number;
     timeId: any;
@@ -57,7 +57,3 @@ class Keqing {
     }
 
 };
-
-
-
-export default Keqing;
